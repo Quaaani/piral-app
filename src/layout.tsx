@@ -4,56 +4,6 @@ import { ComponentsState, ErrorComponentsState, Menu, Notifications, SwitchError
 
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => <li className="nav-item">{children}</li>;
 
-const defaultTiles = (
-  <>
-    <div className="tile rows-2 cols-2">
-      <div className="teaser">
-        <a href="https://piral.io/">Piral</a>
-        <br />
-        for next generation portals
-      </div>
-    </div>
-    <div className="tile rows-2 cols-2">
-      <div className="teaser">
-        <a href="https://www.typescriptlang.org/">TypeScript</a>
-        <br />
-        for writing scalable web apps
-      </div>
-    </div>
-    <div className="tile rows-2 cols-2">
-      <div className="teaser">
-        <a href="https://reactjs.org/">React</a>
-        <br />
-        for building components
-      </div>
-    </div>
-    <div className="tile rows-2 cols-2">
-      <div className="teaser">
-        <a href="http://getbootstrap.com/">Bootstrap</a>
-        <br />
-        for layout and styling
-      </div>
-    </div>
-    <div className="tile rows-2 cols-2">
-      <div className="teaser">
-        <a href="https://sass-lang.com">Sass</a>
-        <br />
-        for crafting custom styles
-      </div>
-    </div>
-  </>
-);
-
-const defaultMenuItems = (
-  <>
-    <MenuItem type="general" meta={{}}>
-      <Link className="nav-link text-dark" to="/not-found">
-        Not Found
-      </Link>
-    </MenuItem>
-  </>
-);
-
 export const errors: Partial<ErrorComponentsState> = {
   not_found: () => (
     <div>
@@ -77,7 +27,6 @@ export const layout: Partial<ComponentsState> = {
       <h1>Hello, world!</h1>
       <p>Welcome to your new microfrontend app shell, built with:</p>
       <div className="tiles">
-        {defaultTiles}
         {children}
       </div>
     </div>
@@ -111,7 +60,6 @@ export const layout: Partial<ComponentsState> = {
               aria-expanded={!collapsed}>
               <ul className="navbar-nav flex-grow">
                 {children}
-                {defaultMenuItems}
               </ul>
             </div>
           </div>

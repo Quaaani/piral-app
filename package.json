@@ -17,7 +17,8 @@
   "scripts": {
     "start": "piral debug",
     "build": "piral build",
-    "postinstall": "piral declaration"
+    "postinstall": "piral declaration",
+    "verdaccio:publish": "npm publish dist/emulator/piral-app-1.0.0.tgz --registry http://localhost:4873/"
   },
   "app": "./src/index.html",
   "types": "dist/index.d.ts",
