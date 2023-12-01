@@ -1,0 +1,35 @@
+{
+  "name": "my-pilet",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "pilet"
+  ],
+  "devDependencies": {
+    "empty-piral": "1.3.3",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/node": "latest",
+    "typescript": "latest",
+    "tslib": "2.5.2",
+    "piral-cli": "1.3.3",
+    "piral-cli-esbuild": "latest"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "importmap": {
+    "imports": {},
+    "inherit": [
+      "empty-piral"
+    ]
+  },
+  "dependencies": {},
+  "source": "src/index.tsx"
+}
